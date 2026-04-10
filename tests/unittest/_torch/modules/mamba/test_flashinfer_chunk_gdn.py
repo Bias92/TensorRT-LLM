@@ -409,7 +409,6 @@ def test_basic_single_seq_no_l2norm_matches_triton():
         inplace_indexed_state_update=False,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=False,
     )
 
@@ -424,7 +423,6 @@ def test_basic_single_seq_no_l2norm_matches_triton():
         inplace_indexed_state_update=False,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=False,
     )
 
@@ -454,7 +452,6 @@ def test_basic_single_seq_with_l2norm_matches_triton():
         inplace_indexed_state_update=False,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
@@ -469,7 +466,6 @@ def test_basic_single_seq_with_l2norm_matches_triton():
         inplace_indexed_state_update=False,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
@@ -504,7 +500,6 @@ def test_varlen_with_l2norm_matches_triton(seq_lens):
         inplace_indexed_state_update=False,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
@@ -519,7 +514,6 @@ def test_varlen_with_l2norm_matches_triton(seq_lens):
         inplace_indexed_state_update=False,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
@@ -551,7 +545,6 @@ def test_packed_initial_state_with_output_final_state_matches_triton():
         inplace_indexed_state_update=False,
         output_final_state=True,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
@@ -566,7 +559,6 @@ def test_packed_initial_state_with_output_final_state_matches_triton():
         inplace_indexed_state_update=False,
         output_final_state=True,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
@@ -611,7 +603,6 @@ def test_indexed_gather_inplace_scatter_matches_triton():
         inplace_indexed_state_update=True,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
@@ -627,7 +618,6 @@ def test_indexed_gather_inplace_scatter_matches_triton():
         inplace_indexed_state_update=True,
         output_final_state=False,
         cu_seqlens=cu,
-        head_first=False,
         use_qk_l2norm_in_kernel=True,
     )
 
